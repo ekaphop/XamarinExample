@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinExample.Views.Section3.StackLayoutExercise2Page">
+    <ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness"
+              iOS="0, 20, 0, 0">
+		</OnPlatform>
+	</ContentPage.Padding>
+    <StackLayout>
+        <Label Padding="10" Text="nyc_photographer" />
+        <Image Aspect="Fill" Source="https://pub-static.fotor.com/static/web/site/features/text/images/en/Easy-to-add-text-to-photo-online-for-free.jpg" />
+
+        <StackLayout Orientation="Horizontal"          
+                     Padding="10,0,0,0"
+                     Spacing="30">
+			<Button Text="Like" />
+			<Button Text="Comment" />
+			<Button Text="Share" />
+		</StackLayout>
+
+        <StackLayout Padding="10">
+			<BoxView Color="#f0f0f0" HeightRequest="1" />
+			<Label Text="700 likes" FontAttributes="Bold" />
+			<Label TextColor="Gray" Text="This is a shot yesterday in Skanor, Sweden, when driving home, from a couple of days of work in Denmark." />
+		</StackLayout>
+
+    </StackLayout>
+</ContentPage>
