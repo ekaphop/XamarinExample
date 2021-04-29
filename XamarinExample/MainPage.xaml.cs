@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using XamarinExample.Views.Section2;
 
 namespace XamarinExample
 {
@@ -14,5 +15,11 @@ namespace XamarinExample
         {
             InitializeComponent();
         }
+
+        async void Section2Label_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new EssentialExercisePage());
+        }
+
     }
 }

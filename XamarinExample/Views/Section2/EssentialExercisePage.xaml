@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinExample.Views.Section2.EssentialExercisePage">
+    <StackLayout x:Name="stackLayout">
+        <Button Text="Next"
+                TextColor="Blue"
+                Clicked="Button_Clicked" />
+        <Slider 
+			x:Name="slider" 
+			Maximum="50" 
+			Minimum="16" />
+		<Label 
+			x:Name="currentQuote" 
+			FontSize="{Binding 
+				Source={x:Reference slider}, 
+				Path=Value}" />
+    </StackLayout>
+</ContentPage>
