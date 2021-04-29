@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using XamarinExample.Views.Section2;
 using XamarinExample.Views.Section3;
+using XamarinExample.Views.Section4;
 
 namespace XamarinExample
 {
@@ -18,11 +19,14 @@ namespace XamarinExample
             NavigationPage.SetHasNavigationBar(this, false);
         }
 
+        #region ----- Section 2 -----
         async void Section2_Label_Tapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new EssentialExercisePage());
         }
+        #endregion
 
+        #region ----- Section 3 -----
         async void Section3_StackLayout_Tapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new StackLayoutExercisePage());
@@ -57,5 +61,13 @@ namespace XamarinExample
         {
             await Navigation.PushAsync(new RelativeLayoutExercisePage());
         }
+        #endregion
+
+        #region ----- Section 4 -----
+        async void Section4_ImageExercise_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ImageExercisePage());
+        }
+        #endregion
     }
 }
