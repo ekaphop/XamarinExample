@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using XamarinExample.Views.Section2;
 using XamarinExample.Views.Section3;
 using XamarinExample.Views.Section4;
+using XamarinExample.Views.Section5;
 
 namespace XamarinExample
 {
@@ -67,6 +68,13 @@ namespace XamarinExample
         async void Section4_ImageExercise_Tapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ImageExercisePage());
+        }
+        #endregion
+
+        #region ----- Section 5 -----
+        async void Section5_Airbnb_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AirbnbPage());
         }
         #endregion
     }
