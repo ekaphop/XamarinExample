@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinExample.Views.Lesson5.ListViewSearchBarPage">
+    <StackLayout>
+        <SearchBar
+            x:Name="searchbar"
+            Placeholder="Search..."
+            TextChanged="SearchBar_TextChanged"
+            />
+
+        <ListView x:Name="textCellListView" SeparatorColor="Blue" HasUnevenRows="True" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" Detail="{Binding Status}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView> 
+    </StackLayout>
+</ContentPage>

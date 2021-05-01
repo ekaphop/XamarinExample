@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinExample.Views.Section5.HotelBookingPage">
+    <StackLayout>
+        <StackLayout BackgroundColor="LightGray"
+                     Padding="15,10,20,10">
+            <Label Text="Recent Searches"
+                   FontAttributes="Bold"
+                   FontSize="24" />
+        </StackLayout>
+
+        <SearchBar
+            x:Name="searchbar"
+            Placeholder="Search..."
+            TextChanged="SearchBar_TextChanged"
+            />
+
+        <ListView x:Name="textCellListView"
+                  SeparatorColor="Blue"
+                  HasUnevenRows="True"
+                  IsPullToRefreshEnabled="True"
+                  Refreshing="ListView_Refreshing">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding BookingAddress}" Detail="{Binding BookingDate}">
+                        <TextCell.ContextActions>
+                            <MenuItem Text="Delete"
+                                      Clicked="DeleteMenuItem_Clicked"
+                                      IsDestructive="True"
+                                      CommandParameter="{Binding .}"/>
+                        </TextCell.ContextActions>
+                        
+                    </TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+      
+    </StackLayout>
+</ContentPage>

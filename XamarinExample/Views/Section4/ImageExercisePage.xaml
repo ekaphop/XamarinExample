@@ -2,14 +2,16 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-	xmlns:local="clr-namespace:XamarinExample"
+    xmlns:local="clr-namespace:XamarinExample.MarkupExtensions"
     x:Class="XamarinExample.Views.Section4.ImageExercisePage">
     <AbsoluteLayout BackgroundColor="Black">
 		<Image x:Name="image" Aspect="AspectFit"
-			 AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
-			 AbsoluteLayout.LayoutFlags="All" />
+			AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+			AbsoluteLayout.LayoutFlags="All" />
 
-		<Image x:Name="previousImage" Aspect="AspectFit"		
+		<!-- Call EmbeddedImage from XAML -->
+		<Image Source="{local:EmbeddedImage ResourceId=XamarinExample.Images.left.png}"
+			Aspect="AspectFit"		
 			AbsoluteLayout.LayoutBounds="0.05, 0.05, 50, 100"
 			AbsoluteLayout.LayoutFlags="PositionProportional" >
 			<Image.GestureRecognizers>
@@ -22,6 +24,7 @@
 			AbsoluteLayout.LayoutBounds="0.5, 0.05, 50, 100"
 			AbsoluteLayout.LayoutFlags="PositionProportional"/>
 
+		<!-- Call EmbeddedImage from code behind using by x:Name -->
 		<Image x:Name="nextImage" Aspect="AspectFit"
 			AbsoluteLayout.LayoutBounds="0.95, 0.05, 50, 100"
 			AbsoluteLayout.LayoutFlags="PositionProportional" >

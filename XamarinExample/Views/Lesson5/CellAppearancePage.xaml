@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinExample.Views.Lesson5.CellAppearancePage">
+    <StackLayout>
+        <Label Text="TextCell ListView"></Label>
+        <ListView x:Name="textCellListView" SeparatorColor="Blue" HasUnevenRows="True" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" Detail="{Binding Status}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <BoxView Color="Gray" HeightRequest="10" />
+
+        <Label Text="ImageCell ListView"></Label>
+        <ListView x:Name="imageCellListView" SeparatorColor="Blue" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell Text="{Binding Name}" Detail="{Binding Status}" ImageSource="{Binding ImageUrl}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <BoxView Color="Gray" WidthRequest="10" />
+
+        <Label Text="StackLayout ListView"></Label>
+        <ListView x:Name="viewCellListView" SeparatorColor="Blue" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="{Binding ImageUrl}" WidthRequest="50" HeightRequest="50" />
+                            <StackLayout>
+                                <Label Text="{Binding Name}" />
+                                <Label Text="{Binding Status}" TextColor="Gray" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+    
+</ContentPage>

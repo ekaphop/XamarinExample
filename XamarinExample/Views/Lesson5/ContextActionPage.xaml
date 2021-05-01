@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinExample.Views.Lesson5.ContextActionPage">
+    <StackLayout>
+        <Label Text="TextCell (ContextAction) ListView"></Label>
+        <ListView x:Name="textCellListView" SeparatorColor="Blue" HasUnevenRows="True" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" Detail="{Binding Status}">
+                        <TextCell.ContextActions>
+                            <MenuItem Text="Call"
+                                      Clicked="CallMenuItem_Clicked"
+                                      CommandParameter="{Binding .}"/>
+                            <MenuItem Text="Delete"
+                                      Clicked="DeleteMenuItem_Clicked"
+                                      IsDestructive="True"
+                                      CommandParameter="{Binding .}"/>
+                        </TextCell.ContextActions>
+                        
+                    </TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+      
+    </StackLayout>
+</ContentPage>

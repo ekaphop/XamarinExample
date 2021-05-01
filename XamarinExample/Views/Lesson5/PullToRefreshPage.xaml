@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinExample.Views.Lesson5.PullToRefreshPage">
+    <StackLayout>
+
+        <Label Text="Pull ListView to refresh data"></Label>
+        <ListView x:Name="viewCellListView"
+                  SeparatorColor="Blue"
+                  HasUnevenRows="True"
+                  IsPullToRefreshEnabled="True"
+                  Refreshing="ListView_Refreshing">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="{Binding ImageUrl}" WidthRequest="50" HeightRequest="50" />
+                            <StackLayout>
+                                <Label Text="{Binding Name}" />
+                                <Label Text="{Binding Status}" TextColor="Gray" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

@@ -13,7 +13,7 @@ namespace XamarinExample.Views.Section4
         public ImageExercisePage()
         {
             InitializeComponent();
-            previousImage.Source = ImageSource.FromResource("XamarinExample.Images.left.png");
+            //previousImage.Source = ImageSource.FromResource("XamarinExample.Images.left.png");
             nextImage.Source = ImageSource.FromResource("XamarinExample.Images.right.png");
             BindImage();
         }

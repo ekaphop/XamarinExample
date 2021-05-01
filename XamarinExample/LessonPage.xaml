@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinExample.LessonPage">
+    <StackLayout>
+        <StackLayout BackgroundColor="YellowGreen" Padding="20,20,20,20">
+            <Label Text="Xamarin.Forms Lesson"
+                   HorizontalTextAlignment="Center"
+                   TextColor="White"
+                   FontSize="30"/>
+        </StackLayout>
+        <ScrollView>
+        <Grid RowSpacing="10" Padding="20,20,20,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Section 5 -->
+            <Label Grid.Row="0" Grid.ColumnSpan="2" Text="Section 5: Lists" FontSize="Large" />
+
+            <Label Grid.Row="1" Grid.Column="0" Text="Basic list" FontSize="Medium"/>
+            <Label Grid.Row="1" Grid.Column="1" TextColor="Blue" Text="Go to page">
+                <Label.GestureRecognizers>
+                     <TapGestureRecognizer Tapped="BasicList_Tapped" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label Grid.Row="2" Grid.Column="0" Text="TextCell,ImageCell,ViewCell" FontSize="Medium"/>
+            <Label Grid.Row="2" Grid.Column="1" TextColor="Blue" Text="Go to page">
+                <Label.GestureRecognizers>
+                     <TapGestureRecognizer Tapped="CellAppearance_Tapped" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+         
+            <Label Grid.Row="3" Grid.Column="0" Text="GroupingItems,Handling selections (ListView)" FontSize="Medium"/>
+            <Label Grid.Row="3" Grid.Column="1" TextColor="Blue" Text="Go to page">
+                <Label.GestureRecognizers>
+                     <TapGestureRecognizer Tapped="GroupingItems_Tapped" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+            
+            <Label Grid.Row="4" Grid.Column="0" Text="TextCell ContextAction (ListView)" FontSize="Medium"/>
+            <Label Grid.Row="4" Grid.Column="1" TextColor="Blue" Text="Go to page">
+                <Label.GestureRecognizers>
+                     <TapGestureRecognizer Tapped="TextCellContextAction_Tapped" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label Grid.Row="5" Grid.Column="0" Text="Pull ListView to refreshing" FontSize="Medium"/>
+            <Label Grid.Row="5" Grid.Column="1" TextColor="Blue" Text="Go to page">
+                <Label.GestureRecognizers>
+                     <TapGestureRecognizer Tapped="ListViewRefreshing_Tapped" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label Grid.Row="6" Grid.Column="0" Text="Search bar" FontSize="Medium"/>
+            <Label Grid.Row="6" Grid.Column="1" TextColor="Blue" Text="Go to page">
+                <Label.GestureRecognizers>
+                     <TapGestureRecognizer Tapped="Searchbar_Tapped" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+            <!--<BoxView Grid.Row="8" Grid.ColumnSpan="2" Color="#2196F3" HeightRequest="1" VerticalOptions="Center"/>-->
+
+        </Grid>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

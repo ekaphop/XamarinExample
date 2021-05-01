@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinExample.ExercisePage">
+
+    <StackLayout>
+        <StackLayout BackgroundColor="#2196F3" Padding="20,50,20,20">
+            <Label Text="Xamarin.Forms Exercise"
+                   HorizontalTextAlignment="Center"
+                   TextColor="White"
+                   FontSize="30"/>
+        </StackLayout>
+        <ScrollView>
+        <Grid RowSpacing="15" Padding="20,20,20,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Section 2 -->
+            <Label Grid.Row="0" Grid.ColumnSpan="2" Text="Section 2: XAML Essentials" FontSize="Large" />
+
+            <Label Grid.Row="1" Grid.Column="0" Text="XAML Essentials" FontSize="Medium"/>
+            <Label Grid.Row="1" Grid.Column="1" TextColor="Blue" Text="Exercise">
+                <Label.GestureRecognizers>
+                     <TapGestureRecognizer Tapped="Section2_Label_Tapped" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+            <BoxView Grid.Row="2" Grid.ColumnSpan="2" Color="#2196F3" HeightRequest="1" VerticalOptions="Center"/>
+
+            <!-- Section 3 -->
+            <Label Grid.Row="3" Grid.ColumnSpan="2" Text="Section 3: Layouts" FontSize="Large" />
+
+            <Label Grid.Row="4" Grid.Column="0" Text="Stack Layout 1" FontSize="Medium"/>
+            <Label Grid.Row="4" Grid.Column="1" TextColor="Blue" Text="Exercise">
+                <Label.GestureRecognizers>
+                     <TapGestureRecognizer Tapped="Section3_StackLayout_Tapped" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label Grid.Row="5" Grid.Column="0" Text="Stack Layout 2" FontSize="Medium"/>
+            <Label Grid.Row="5" Grid.Column="1" TextColor="Blue" Text="Exercise">
+                <Label.GestureRecognizers>
+                     <TapGestureRecognizer Tapped="Section3_StackLayout2_Tapped" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label Grid.Row="6" Grid.Column="0" Text="Grid" FontSize="Medium"/>
+            <Label Grid.Row="6" Grid.Column="1" TextColor="Blue" Text="Exercise">
+                <Label.GestureRecognizers>
+                     <TapGestureRecognizer Tapped="Section3_Grid_Tapped" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label Grid.Row="7" Grid.Column="0" Text="Grid 2" FontSize="Medium"/>
+            <Label Grid.Row="7" Grid.Column="1" TextColor="Blue" Text="Exercise">
+                <Label.GestureRecognizers>
+                     <TapGestureRecognizer Tapped="Section3_Grid2_Tapped" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label Grid.Row="8" Grid.Column="0" Text="Absolute Layout" FontSize="Medium"/>
+            <Label Grid.Row="8" Grid.Column="1" TextColor="Blue" Text="Exercise">
+                <Label.GestureRecognizers>
+                     <TapGestureRecognizer Tapped="Section3_AbsoluteLayout_Tapped" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label Grid.Row="9" Grid.Column="0" Text="Absolute Layout 2" FontSize="Medium"/>
+            <Label Grid.Row="9" Grid.Column="1" TextColor="Blue" Text="Exercise">
+                <Label.GestureRecognizers>
+                     <TapGestureRecognizer Tapped="Section3_AbsoluteLayout2_Tapped" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label Grid.Row="10" Grid.Column="0" Text="Relative Layout" FontSize="Medium"/>
+            <Label Grid.Row="10" Grid.Column="1" TextColor="Blue" Text="Exercise">
+                <Label.GestureRecognizers>
+                     <TapGestureRecognizer Tapped="Section3_RelativeLayout_Tapped" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+            <BoxView Grid.Row="11" Grid.ColumnSpan="2" Color="#2196F3" HeightRequest="1" VerticalOptions="Center"/>
+
+            <!-- Section 4 -->
+            <Label Grid.Row="12" Grid.ColumnSpan="2" Text="Section 4: Images" FontSize="Large" />
+
+            <Label Grid.Row="13" Grid.Column="0" Text="Image Loader" FontSize="Medium"/>
+            <Label Grid.Row="13" Grid.Column="1" TextColor="Blue" Text="Exercise">
+                <Label.GestureRecognizers>
+                     <TapGestureRecognizer Tapped="Section4_ImageExercise_Tapped" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+            <BoxView Grid.Row="14" Grid.ColumnSpan="2" Color="#2196F3" HeightRequest="1" VerticalOptions="Center"/>
+
+            <!-- Section 5 -->
+            <Label Grid.Row="15" Grid.ColumnSpan="2" Text="Section 5: Lists" FontSize="Large" />
+
+            <Label Grid.Row="16" Grid.Column="0" Text="(New!!!) Airbnb's search" FontSize="Medium"/>
+            <Label Grid.Row="16" Grid.Column="1" TextColor="Blue" Text="Exercise">
+                <Label.GestureRecognizers>
+                     <TapGestureRecognizer Tapped="Section5_Airbnb_Tapped" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+            <BoxView Grid.Row="17" Grid.ColumnSpan="2" Color="#2196F3" HeightRequest="1" VerticalOptions="Center"/>
+
+            <!-- Section 6 -->
+            <Label Grid.Row="18" Grid.ColumnSpan="2" Text="Section 6: Navigation" FontSize="Large" />
+
+            <Label Grid.Row="19" Grid.Column="0" Text="Instagram app" FontSize="Medium"/>
+            <Label Grid.Row="19" Grid.Column="1" TextColor="Blue" Text="Exercise">
+                <Label.GestureRecognizers>
+                     <TapGestureRecognizer Tapped="Section6_Instagram_Tapped" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+            <BoxView Grid.Row="20" Grid.ColumnSpan="2" Color="#2196F3" HeightRequest="1" VerticalOptions="Center"/>
+
+        </Grid>
+        </ScrollView>
+    </StackLayout>
+
+</ContentPage>

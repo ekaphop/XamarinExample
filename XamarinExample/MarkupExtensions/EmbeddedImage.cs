@@ -7,14 +7,14 @@ namespace XamarinExample.MarkupExtensions
     [ContentProperty("ResourceId")]
     public class EmbeddedImage : IMarkupExtension
     {
-        public string ResouceId { get; set; }
+        public string ResourceId { get; set; }
 
         public object ProvideValue(IServiceProvider serviceProvider)
         {
-            if (String.IsNullOrWhiteSpace(ResouceId))
+            if (string.IsNullOrWhiteSpace(ResourceId))
                 return null;
 
-            return ImageSource.FromResource(ResouceId);
+            return ImageSource.FromResource(ResourceId);
         }
     }
 }
