@@ -1,9 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XamarinExample.Views.Section6.InstagramAppPage">
-  <!--Pages can be added as references or inline-->
-  <ContentPage Title="Tab 1" />
-  <ContentPage Title="Tab 2" />
-  <ContentPage Title="Tab 3" />
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:XamarinExample.Views.Section6"
+            xmlns:local1="clr-namespace:XamarinExample.MarkupExtensions"
+            x:Class="XamarinExample.Views.Section6.InstagramAppPage">
+
+    <local:ActivityPage
+        Title="Activities"
+        IconImageSource="{local1:EmbeddedImage ResourceId=XamarinExample.Images.heart.png}" />
+    <local:ProfilePage
+        Title="Profile"
+        IconImageSource="{local1:EmbeddedImage ResourceId=XamarinExample.Images.user.png}" />
 </TabbedPage>

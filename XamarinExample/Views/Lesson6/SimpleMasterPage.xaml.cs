@@ -1,49 +1,47 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+
 using Xamarin.Forms;
 using XamarinExample.Models;
 
-namespace XamarinExample.Views.Lesson5
+namespace XamarinExample.Views.Lesson6
 {
-    public partial class ListViewSearchBarPage : ContentPage
+    public partial class SimpleMasterPage : ContentPage
     {
-        IEnumerable<Contact> GetContacts(string searchText = null)
+        public SimpleMasterPage()
         {
+            InitializeComponent();
+
+            //Mock data
             var contacts = new List<Contact> {
                 new Contact {
-                    Name = "Acer",
+                    Name = "Person 1",
                     ImageUrl = "https://image.freepik.com/free-icon/running-man_318-1564.jpg"
                 },
                 new Contact {
-                    Name = "Mac",
+                    Name = "Person 2",
                     Status = "Let's talk to team.",
                     ImageUrl = "https://image.freepik.com/free-icon/person-street-view-symbol_318-1051.jpg"
                 },
                 new Contact {
-                    Name = "Dell",
+                    Name = "Person 3",
                     Status  = "Nice to meet you.",
                     ImageUrl = "https://image.freepik.com/free-icon/group-meeting_318-10037.jpg"
                 }
             };
 
-            if (string.IsNullOrWhiteSpace(searchText))
-                return contacts;
-
-            return contacts.Where(s => s.Name.StartsWith(searchText));
+            //Binding
+            textCellListView.ItemsSource = contacts;
         }
 
-        public ListViewSearchBarPage()
+        async void textCellListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            InitializeComponent();
+            if (e.SelectedItem == null)
+                return;
 
-            textCellListView.ItemsSource = GetContacts();
+            var contact = e.SelectedItem as Contact;
+            await Navigation.PushAsync(new SimpleDetailPage(contact));
+            textCellListView.SelectedItem = null;
         }
-
-        void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            textCellListView.ItemsSource = GetContacts(e.NewTextValue);
-        }
-
     }
 }

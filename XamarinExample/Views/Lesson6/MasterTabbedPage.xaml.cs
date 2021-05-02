@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace XamarinExample.Views.Section6
+namespace XamarinExample.Views.Lesson6
 {
-    public partial class InstagramAppPage : TabbedPage
+    public partial class MasterTabbedPage : TabbedPage
     {
-        public InstagramAppPage()
+        public MasterTabbedPage()
         {
             InitializeComponent();
         }

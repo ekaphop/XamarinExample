@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns:ic="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinExample.Views.Section6.ActivityPage">
+    <ListView x:Name="viewCellListView"
+              SeparatorColor="Blue"
+              HasUnevenRows="True"
+              ItemSelected="ListView_ItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal">
+                        <ic:CircleImage
+                            Source="{Binding ImageUrl}"
+                            WidthRequest="30"
+                            HeightRequest="30"
+                            Aspect="AspectFit"/>
+                        <StackLayout>
+                            <Label Text="{Binding Description}" />
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

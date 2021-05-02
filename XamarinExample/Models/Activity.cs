@@ -5,10 +5,6 @@ namespace XamarinExample.Models
     {
 		public int UserId { get; set; }
 		public string Description { get; set; }
-
-		public string ImageUrl
-		{
-			get { return $"http://lorempixel.com/100/100/people/{UserId}"; }
-		}
+		public string ImageUrl { get; set; }
 	}
 }
