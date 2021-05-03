@@ -4,6 +4,7 @@ using Xamarin.Forms;
 using XamarinExample.Views.Lesson5;
 using XamarinExample.Views.Lesson6;
 using XamarinExample.Views.Lesson7;
+using XamarinExample.Views.Lesson8;
 
 namespace XamarinExample
 {
@@ -73,6 +74,19 @@ namespace XamarinExample
         {
             await Navigation.PushAsync(new TableViewPage());
         }
+        #endregion
+
+        #region ----- Lesson 8 : Data Access -----
+        async void UsingSQLite_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new UsingSQLitePage());
+        }
+
+        async void UsingRestful_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new UsingRestfullPage());
+        }
+        
         #endregion
     }
 }

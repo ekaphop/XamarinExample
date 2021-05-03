@@ -109,6 +109,25 @@
                 </Label.GestureRecognizers>
             </Label>
 
+            <BoxView Grid.Row="16" Grid.ColumnSpan="2" Color="#2196F3" HeightRequest="1" VerticalOptions="Center"/>
+
+            <!-- Section 8 -->
+            <Label Grid.Row="17" Grid.ColumnSpan="2" Text="Section 8: Data Access" FontSize="Large" />
+
+            <Label Grid.Row="18" Grid.Column="0" Text="Using SQLite (Get,Add,Edit,Delete)" FontSize="Medium"/>
+            <Label Grid.Row="18" Grid.Column="1" TextColor="Blue" Text="Go to page">
+                <Label.GestureRecognizers>
+                     <TapGestureRecognizer Tapped="UsingSQLite_Tapped" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label Grid.Row="19" Grid.Column="0" Text="Using RESTFull API" FontSize="Medium"/>
+            <Label Grid.Row="19" Grid.Column="1" TextColor="Blue" Text="Go to page">
+                <Label.GestureRecognizers>
+                     <TapGestureRecognizer Tapped="UsingRestful_Tapped" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+
             <!--<BoxView Grid.Row="8" Grid.ColumnSpan="2" Color="#2196F3" HeightRequest="1" VerticalOptions="Center"/>-->
         </Grid>
         </ScrollView>
