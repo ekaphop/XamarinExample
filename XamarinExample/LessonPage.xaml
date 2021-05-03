@@ -128,6 +128,18 @@
                 </Label.GestureRecognizers>
             </Label>
 
+            <BoxView Grid.Row="20" Grid.ColumnSpan="2" Color="#2196F3" HeightRequest="1" VerticalOptions="Center"/>
+
+            <!-- Section 9 -->
+            <Label Grid.Row="21" Grid.ColumnSpan="2" Text="Section 9: MVVM" FontSize="Large" />
+
+            <Label Grid.Row="22" Grid.Column="0" Text="Playlist MVVM" FontSize="Medium"/>
+            <Label Grid.Row="22" Grid.Column="1" TextColor="Blue" Text="Go to page">
+                <Label.GestureRecognizers>
+                     <TapGestureRecognizer Tapped="Playlist_Tapped" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
+
             <!--<BoxView Grid.Row="8" Grid.ColumnSpan="2" Color="#2196F3" HeightRequest="1" VerticalOptions="Center"/>-->
         </Grid>
         </ScrollView>

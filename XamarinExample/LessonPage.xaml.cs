@@ -5,6 +5,7 @@ using XamarinExample.Views.Lesson5;
 using XamarinExample.Views.Lesson6;
 using XamarinExample.Views.Lesson7;
 using XamarinExample.Views.Lesson8;
+using XamarinExample.Views.Lesson9;
 
 namespace XamarinExample
 {
@@ -86,7 +87,14 @@ namespace XamarinExample
         {
             await Navigation.PushAsync(new UsingRestfullPage());
         }
-        
         #endregion
+
+        #region ----- Lesson 9 : MVVM -----
+        async void Playlist_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PlaylistsPage());
+        }
+        #endregion
+        
     }
 }
