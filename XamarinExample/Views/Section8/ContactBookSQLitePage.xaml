@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinExample.Views.Section8.ContactBookSQLitePage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="Add"
+            Clicked="ToolbarItem_AddContact_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <ListView
+            x:Name="listView"
+            SeparatorColor="Black"
+            HasUnevenRows="True"
+            IsPullToRefreshEnabled="True"
+            Refreshing="ListView_Refreshing"
+            ItemSelected="ListView_ItemSelected">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Fullname}" Detail="{Binding Id}" >
+                    <TextCell.ContextActions>
+                        <MenuItem
+                            Text="Delete"
+                            Clicked="DeleteMenuItem_Clicked"
+                            IsDestructive="True"
+                            CommandParameter="{Binding .}"/>
+                    </TextCell.ContextActions>
+                    </TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

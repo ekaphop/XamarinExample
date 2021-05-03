@@ -6,6 +6,7 @@ using XamarinExample.Views.Section4;
 using XamarinExample.Views.Section5;
 using XamarinExample.Views.Section6;
 using XamarinExample.Views.Section7;
+using XamarinExample.Views.Section8;
 
 namespace XamarinExample
 {
@@ -76,13 +77,18 @@ namespace XamarinExample
 
         #region ----- Section 6 -----
         async void Section6_Instagram_Tapped(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new InstagramAppPage());
-        }
+            => await Navigation.PushAsync(new InstagramAppPage());
+
         #endregion
 
         #region ----- Section 7 -----
-        async void Section7_ContactBook_Tapped(object sender, EventArgs e) => await Navigation.PushAsync(new ContactBookPage());
+        async void Section7_ContactBook_Tapped(object sender, EventArgs e)
+            => await Navigation.PushAsync(new ContactBookPage());
+        #endregion
+
+        #region ----- Section 8 -----
+        async void Section8_ContactBook_Tapped(object sender, EventArgs e)
+            => await Navigation.PushAsync(new ContactBookSQLitePage());
         #endregion
     }
 }

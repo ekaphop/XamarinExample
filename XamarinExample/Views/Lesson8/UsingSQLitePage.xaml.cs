@@ -11,25 +11,10 @@ namespace XamarinExample.Views.Lesson8
     {
         private SQLiteAsyncConnection _connection;
         private ObservableCollection<Recipe> _recipes;
-        //public ObservableCollection<Recipe> Recipes
-        //{
-        //    get { return _recipes; }
-        //    set
-        //    {
-        //        if (_recipes != value)
-        //        {
-        //            _recipes = value;
-        //            OnPropertyChanged(nameof(Recipes));
-        //        }
-        //    }        
-        //}
 
         public UsingSQLitePage()
         {
             InitializeComponent();
-
-            _recipes = new ObservableCollection<Recipe>();
-
             _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
         }
 

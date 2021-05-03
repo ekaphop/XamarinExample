@@ -14,6 +14,7 @@ namespace XamarinExample.Models
         //Search from internet
         public string Fullname => $"{FirstName} {LastName}";
 
+        //Auto Suggest from .NET
         public static implicit operator EventHandler<object>(ContactBook v)
         {
             throw new NotImplementedException();

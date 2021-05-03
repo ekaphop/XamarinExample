@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinExample.Views.Section8.ContactBookSQLiteDetailsPage">
+    <TableView Intent="Form" BackgroundColor="White">
+        <TableRoot>
+            <TableSection Title="NAME">
+                <EntryCell
+                    x:Name="firstnameEntryCell"
+                    Label="First name"
+                    Placeholder="(ex: Ekaphop)"
+                    Text="{Binding FirstName}"/>
+                <EntryCell
+                    x:Name="lastnameEntryCell"
+                    Label="Last name"
+                    Placeholder="(ex: Khainara)"
+                    Text="{Binding LastName}"/>
+            </TableSection>
+
+            <TableSection Title="CONTACT">
+                <EntryCell
+                    x:Name="phoneEntryCell"
+                    Label="Phone"
+                    Keyboard="Telephone"
+                    Text="{Binding PhoneNumber}"/>
+                <EntryCell
+                    x:Name="emailEntryCell"
+                    Label="Email"
+                    Keyboard="Email"
+                    Text="{Binding EmailAddress}"/>
+            </TableSection>
+
+            <TableSection Title="OTHERS">
+                <SwitchCell
+                    x:Name="blockedSwitchCell"
+                    Text="Blocked"
+                    On="{Binding IsBlocked}" />
+            </TableSection>
+
+            <TableSection>
+                <ViewCell>
+                    <Button
+                        x:Name="saveButton"
+                        Text="Save"
+                        Clicked="SaveButton_Clicked"/>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
