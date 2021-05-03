@@ -135,6 +135,9 @@
                      <TapGestureRecognizer Tapped="Section8_ContactBook_Tapped" NumberOfTapsRequired="1" />
                 </Label.GestureRecognizers>
             </Label>
+
+            <Label Grid.Row="26" Grid.Column="0" TextColor="Red" Text="netflixroulette.net ปิดให้บริการ" FontSize="Medium"/>
+            <BoxView Grid.Row="27" Grid.ColumnSpan="2" Color="#2196F3" HeightRequest="1" VerticalOptions="Center"/>
             
         </Grid>
         </ScrollView>
