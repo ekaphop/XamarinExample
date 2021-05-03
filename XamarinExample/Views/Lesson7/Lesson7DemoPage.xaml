@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:system="clr-namespace:System;assembly=mscorlib"
+    x:Class="XamarinExample.Views.Lesson7.Lesson7DemoPage">
+    <ScrollView VerticalScrollBarVisibility="Always">
+        <StackLayout Margin="10"> 
+            <Label Text="Switch UI" Margin="0,20,0,0" />
+            <Switch x:Name="switchUi" Toggled="Switch_Toggled" />
+            <Label x:Name="label" Text="Content"/>
+        
+            <Label Text="Slider UI" Margin="0,20,0,0" />
+            <Slider x:Name="sliderUi" Maximum="255" Minimum="10" Value="50" ValueChanged="SliderUi_ValueChanged" />
+            <Label x:Name="sliderLabel" Text="{Binding Source={x:Reference sliderUi}, Path=Value, StringFormat='{0:N0}'}" />
+
+            <Label Text="Stepper UI" Margin="0,20,0,0" />
+            <Stepper x:Name="stepperUi" Increment="5" Maximum="255" Minimum="10" Value="50"/>
+            <Label x:Name="stepperLabel" Text="{Binding Source={x:Reference stepperUi}, Path=Value}" />
+
+            <Label Text="Entry UI" Margin="0,20,0,0" />
+            <Entry Keyboard="Numeric" Placeholder="Phone number" />
+            <Entry IsPassword="True" Completed="PasswordEntry_Completed" TextChanged="PasswordEntry_TextChanged" />
+            <Label x:Name="passwordCompletedLabel"/>
+            <Label x:Name="passwordTextChangedLabel"/>
+
+            <Label Text="Picker XMAL Hardcode UI" Margin="0,20,0,0" />
+            <Picker x:Name="contactMethods"
+                    Title="Contact Method"
+                    SelectedIndexChanged="Picker_SelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>SMS</x:String>
+                    <x:String>Email</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="Picker Binding UI" Margin="0,20,0,0" />
+            <Picker x:Name="pickerUi"
+                    Title="Contact Method binding"
+                    SelectedIndexChanged="PickerUi_SelectedIndexChanged"/>
+
+            <Label Text="DatePicker" Margin="0,20,0,0" />
+            <DatePicker Date="{x:Static system:DateTime.Today}"
+                        Format="d MMM yyyy"
+                        DateSelected="DatePicker_DateSelected"/>
+            <TimePicker Time="13:00"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

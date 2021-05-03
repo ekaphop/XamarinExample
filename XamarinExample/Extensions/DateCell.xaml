@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ViewCell
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinExample.Extensions.DateCell">
+    <StackLayout Orientation="Horizontal" Padding="20,0,0,0" >
+        <Label Text="{Binding Label}" VerticalOptions="Center" />
+        <DatePicker Date="1 Jan 2016" Format="d/M/yyyy"
+                    HorizontalOptions="EndAndExpand"/>
+    </StackLayout>
+</ViewCell>

@@ -5,6 +5,7 @@ using XamarinExample.Views.Section3;
 using XamarinExample.Views.Section4;
 using XamarinExample.Views.Section5;
 using XamarinExample.Views.Section6;
+using XamarinExample.Views.Section7;
 
 namespace XamarinExample
 {
@@ -78,6 +79,10 @@ namespace XamarinExample
         {
             await Navigation.PushAsync(new InstagramAppPage());
         }
+        #endregion
+
+        #region ----- Section 7 -----
+        async void Section7_ContactBook_Tapped(object sender, EventArgs e) => await Navigation.PushAsync(new ContactBookPage());
         #endregion
     }
 }

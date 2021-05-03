@@ -3,6 +3,7 @@
 using Xamarin.Forms;
 using XamarinExample.Views.Lesson5;
 using XamarinExample.Views.Lesson6;
+using XamarinExample.Views.Lesson7;
 
 namespace XamarinExample
 {
@@ -46,7 +47,6 @@ namespace XamarinExample
         #endregion
 
         #region ----- Lesson 6 : Navigation -----
-        
         async void Welcome_Tapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new WelcomePage());
@@ -60,6 +60,18 @@ namespace XamarinExample
         async void TabbedPage_Tapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new MasterTabbedPage());
+        }
+        #endregion
+
+        #region ----- Lesson 7 : Forms and Setting Pages -----
+        async void Lesson7Demo_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Lesson7DemoPage());
+        }
+
+        async void TableView_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new TableViewPage());
         }
         #endregion
     }
