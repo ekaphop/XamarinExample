@@ -140,7 +140,19 @@
                 </Label.GestureRecognizers>
             </Label>
 
-            <!--<BoxView Grid.Row="8" Grid.ColumnSpan="2" Color="#2196F3" HeightRequest="1" VerticalOptions="Center"/>-->
+            <BoxView Grid.Row="23" Grid.ColumnSpan="2" Color="#2196F3" HeightRequest="1" VerticalOptions="Center"/>
+
+            <!-- Section 9 -->
+            <Label Grid.Row="24" Grid.ColumnSpan="2" Text="Section 10: Beyond the Basics" FontSize="Large" />
+
+            <Label Grid.Row="25" Grid.Column="0" Text="Resource Dictionary" FontSize="Medium"/>
+            <Label Grid.Row="25" Grid.Column="1" TextColor="Blue" Text="Go to page">
+                <Label.GestureRecognizers>
+                     <TapGestureRecognizer Tapped="ResourceDictionary_Tapped" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+
+                <!--<BoxView Grid.Row="8" Grid.ColumnSpan="2" Color="#2196F3" HeightRequest="1" VerticalOptions="Center"/>-->
+            </Label>
         </Grid>
         </ScrollView>
     </StackLayout>

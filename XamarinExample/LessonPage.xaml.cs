@@ -1,6 +1,7 @@
 ﻿using System;
 
 using Xamarin.Forms;
+using XamarinExample.Views.Lesson10;
 using XamarinExample.Views.Lesson5;
 using XamarinExample.Views.Lesson6;
 using XamarinExample.Views.Lesson7;
@@ -95,6 +96,14 @@ namespace XamarinExample
             await Navigation.PushAsync(new PlaylistsPage());
         }
         #endregion
-        
+
+        #region ----- Lesson 10 : Beyond the Basics -----
+        async void ResourceDictionary_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SimpleResourcePage());
+        }
+        #endregion
     }
+
+
 }
