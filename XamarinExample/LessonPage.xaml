@@ -149,10 +149,17 @@
             <Label Grid.Row="25" Grid.Column="1" TextColor="Blue" Text="Go to page">
                 <Label.GestureRecognizers>
                      <TapGestureRecognizer Tapped="ResourceDictionary_Tapped" NumberOfTapsRequired="1" />
-                </Label.GestureRecognizers>
-
-                <!--<BoxView Grid.Row="8" Grid.ColumnSpan="2" Color="#2196F3" HeightRequest="1" VerticalOptions="Center"/>-->
+                </Label.GestureRecognizers>      
             </Label>
+
+            <Label Grid.Row="26" Grid.Column="0" Text="Messaging Center" FontSize="Medium"/>
+            <Label Grid.Row="26" Grid.Column="1" TextColor="Blue" Text="Go to page">
+                <Label.GestureRecognizers>
+                     <TapGestureRecognizer Tapped="MessagingCenter_Tapped" NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>      
+            </Label>
+
+            <!--<BoxView Grid.Row="8" Grid.ColumnSpan="2" Color="#2196F3" HeightRequest="1" VerticalOptions="Center"/>-->
         </Grid>
         </ScrollView>
     </StackLayout>
