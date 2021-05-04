@@ -15,5 +15,15 @@ namespace XamarinExample.ViewModels
         {
             await Application.Current.MainPage.Navigation.PushAsync(page);
         }
+
+        public async void DisplayAlert(string title, string message, string ok)
+        {
+            await Application.Current.MainPage.DisplayAlert(title, message, ok);
+        }
+
+        public async Task<Page> PopAsync()
+        {
+            return await Application.Current.MainPage.Navigation.PopAsync();
+        }
     }
 }

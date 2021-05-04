@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinExample.Views.Section9.ContactBookMVVMPage">
+    <ContentPage.ToolbarItems>
+		<ToolbarItem Text="Add" Command="{Binding AddContactCommand}" />
+	</ContentPage.ToolbarItems>
+    <StackLayout>
+        <ListView
+            x:Name="listView"
+            SeparatorColor="Black"
+            HasUnevenRows="True"
+            ItemsSource="{Binding ContactBooks}"
+            ItemSelected="ListView_ItemSelected">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Fullname}" Detail="{Binding Id}" >
+                    <TextCell.ContextActions>
+                        <MenuItem
+                            Text="Delete"
+                            IsDestructive="True"
+                            Command="{Binding Path=BindingContext.DeleteContactCommand, Source={x:Reference listView}}"
+                            CommandParameter="{Binding .}"/>
+                    </TextCell.ContextActions>
+                    </TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

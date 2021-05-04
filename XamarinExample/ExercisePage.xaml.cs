@@ -7,6 +7,7 @@ using XamarinExample.Views.Section5;
 using XamarinExample.Views.Section6;
 using XamarinExample.Views.Section7;
 using XamarinExample.Views.Section8;
+using XamarinExample.Views.Section9;
 
 namespace XamarinExample
 {
@@ -89,6 +90,11 @@ namespace XamarinExample
         #region ----- Section 8 -----
         async void Section8_ContactBook_Tapped(object sender, EventArgs e)
             => await Navigation.PushAsync(new ContactBookSQLitePage());
+        #endregion
+
+        #region ----- Section 9 -----
+        async void Section9_ContactBook_Tapped(object sender, EventArgs e)
+            => await Navigation.PushAsync(new ContactBookMVVMPage());
         #endregion
     }
 }
